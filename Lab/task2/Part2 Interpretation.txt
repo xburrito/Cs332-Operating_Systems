@@ -1,0 +1,20 @@
+Albert Chang
+Csc 33200 - S
+
+Part 2 Interpretation
+
+For process P: 
+
+fq was assigned to fork() and therefore != 0. As a result, the else condition ran where b = a + b - 5 = 35. When values were printed, a = 10, b = 30, and a PID was generated.
+
+For process Q: 
+
+Since fq = 0 here, a = a + b = 35. All values are printed where a = 35, b = 25 and a random PID was generated.
+
+For second process Q: 
+
+Since fr != 0 b is incremented by 20 from its original assigned value and therefore b = 45. a still gets updated to a = a + b = 35 and all values are printed as normal where a = 35, b = 45 but the PID remains the same as the previous process Q output.
+
+For process R: 
+
+This would occur if fr == 0. As a result, a = (a * b) + 30 = 905 and b would equal its initial assigned value (25). Output would print as follows: a = 905, b = 25 and a randomly generated PID. 
